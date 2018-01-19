@@ -3,13 +3,14 @@ import { Text, AppRegistry, View } from 'react-native';
 
 const Estilos = {
   estiloTexto: {
-    fontSize: 20
+    fontSize: 30,
+    backgroundColor: 'red'
   }
 };
 
 const App = () => {
   return(
-    <Text>Olá</Text>
+    <Text style={Estilos.estiloTexto}>Olá mundo react</Text>
   )
 };
 
