@@ -5,19 +5,25 @@ const Estilos = {
   estiloTexto: {
     fontSize: 30,
     backgroundColor: 'red',
-    margin: 30,
+    paddingTop: 15,
+    color: '#fff',
+    textAlign: 'center',
     shadowColor: '#000',
-    shadowOpacity: 1,
+    shadowOpacity: 0.4,
     shadowOffset: {
-      width: 10,
-      height: 15
+      width: 0,
+      height: 2
     }
   }
 };
 
 const App = () => {
+  const { estiloTexto } = Estilos;
+
   return(
-    <Text style={Estilos.estiloTexto}>Frases do Dia</Text>
+    <View>
+      <Text style={estiloTexto}>Frases do Dia</Text>
+    </View>
   )
 };
 
