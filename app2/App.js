@@ -1,28 +1,38 @@
 import React from 'react';
-import { Text, AppRegistry, View } from 'react-native';
+import { Text, AppRegistry, View, Image, TouchableOpacity } from 'react-native';
 
 const Estilos = {
-  estiloTexto: {
-    fontSize: 30,
-    backgroundColor: 'red',
-    paddingTop: 15,
-    color: '#fff',
-    textAlign: 'center',
-    shadowColor: '#000',
-    shadowOpacity: 0.4,
-    shadowOffset: {
-      width: 0,
-      height: 2
-    }
+  principal: {
+    flex:1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  botao: {
+    backgroundColor: '#538530',
+    paddingVertical: 10,
+    paddingHorizontal: 40,
+    marginTop: 20
+  },
+  textoBotao: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold'
   }
 };
 
+const botaoPressionado = () => {
+
+};
+
 const App = () => {
-  const { estiloTexto } = Estilos;
+  const { principal, botao, textoBotao } = Estilos;
 
   return(
-    <View>
-      <Text style={estiloTexto}>Frases do Dia</Text>
+    <View style={principal}>
+      <Text>FRASE DO DIA</Text>
+      <TouchableOpacity style={botao}>
+          <Text style={textoBotao}>Nova Frase</Text>
+      </TouchableOpacity>
     </View>
   )
 };
