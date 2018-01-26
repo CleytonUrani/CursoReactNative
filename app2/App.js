@@ -26,7 +26,7 @@ const gerarNovaFrase = () => {
 
   let frases = [];
   frases.push('Levanta,sacode a poeira e dá a volta por cima.;Paulo Vanzolini');
-  frases.push('Nem todos os dias são bons, mas há albo bom em cadas dia.;Pensador');
+  frases.push('Nem todos os dias são bons, mas há algo bom em cadas dia.;Pensador');
   frases.push('Suba o primeiro degrau com fé. não é necessário que você veja toda a escada. Apenas dê o primeiro passo.;Marthin Luther King');
   frases.push('A criança é o amor feito visível.;Fredrich Novalis');
   frases.push('Às vezes é melhor ficar calado deixando que os outros pensem que você é um idiota, do que abrir a boca e não deixar nenhuma dúvida.;Abraham Lincoln');
