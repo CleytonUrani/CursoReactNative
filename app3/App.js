@@ -3,24 +3,40 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Button
 } from 'react-native';
 
 class MeuComponente extends Component{
   render(){
     return (
       <View>
-        <Text>{this.props.p1}</Text>
-        <Text>{this.props.p2}</Text>
+        <Text>{this.props.teste}</Text>
       </View>
     );
   }
 }
 
 class app3 extends Component{
+  constructor(props){
+    super(props);
+
+    this.state = { texto: 'Texto teste2' };
+  };
+
+  alteraTexto(){
+    this.setState({ texto: 'Outra coisa' });
+  }
+
   render(){
     return (
-      <MeuComponente p1='Primeiro' p2='Segundo'></MeuComponente>
+      <View>
+        <Button
+          title='Botão'
+          onPress={() => {this.alteraTexto()}}
+        />
+        <MeuComponente teste={this.state.texto}></MeuComponente>
+      </View>
     );
   }
 }
