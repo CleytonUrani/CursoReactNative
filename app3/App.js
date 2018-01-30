@@ -99,7 +99,7 @@ class app3 extends Component{
           <Text style={styles.txtResultado}>{this.state.resultado}</Text>
 
           <Icone escolha={this.state.escolhaComputador} jogador='Computador'></Icone>
-          <Icone escolha={this.state.escolhaUsuario} jogador='Usuário'></Icone>
+          <Icone escolha={this.state.escolhaUsuario} jogador='Você'></Icone>
 
         </View>
 
@@ -124,22 +124,32 @@ class Icone extends Component{
     //this.props.escolha
     //this.props.jogador
     if(this.props.escolha == 'pedra'){
-      
+      return (
+        <View style={styles.icone}>
+          <Text style={styles.txtJogador}>{this.props.jogador}</Text>
+          <Image source={require('./imagem/pedra.png')} />
+        </View>
+      );
     }
     else if(this.props.escolha == 'papel'){
-
+      return (
+        <View style={styles.icone}>
+          <Text style={styles.txtJogador}>{this.props.jogador}</Text>
+          <Image source={require('./imagem/papel.png')} />
+        </View>
+      );
     }
     else if(this.props.escolha == 'tesoura'){
-
+      return (
+        <View style={styles.icone}>
+          <Text style={styles.txtJogador}>{this.props.jogador}</Text>
+          <Image source={require('./imagem/tesoura.png')} />
+        </View>
+      );
     }
     else{
       return false;
     }
-
-    return (
-      <View>
-      </View>
-    );
   }
 }
 
@@ -161,6 +171,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'red',
     height: 60
+  },
+  icone:{
+    alignItems: 'center',
+    marginBottom: 20
+  },
+  txtJogador: {
+    fontSize: 18
   }
 });
 
