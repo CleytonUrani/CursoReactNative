@@ -4,9 +4,11 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
-  Image
+  Button
 } from 'react-native';
+
+import Topo from './src/components/topo'
+import Icone from './src/components/icone'
 
 class app3 extends Component{
   constructor(props){
@@ -16,72 +18,63 @@ class app3 extends Component{
   }
 
   jokenpo(escolhaUsuario){
-    var numAleatorio = Math.floor(Math.random() *3);
-    var escolhaComputador = '';
+    const numAleatorio = Math.floor(Math.random() *3);
+    let escolhaComputador = '';
 
-    switch(numAleatorio){
+    switch (numAleatorio) {
       case 0: escolhaComputador = 'pedra'; break;
       case 1: escolhaComputador = 'papel'; break;
       case 2: escolhaComputador = 'tesoura'; break;
+      default: escolhaComputador = '';
     }
 
-    var resultado = '';
+    let resultado = '';
 
-    if(escolhaComputador == 'pedra'){
-      if(escolhaUsuario == 'pedra'){
+    if (escolhaComputador === 'pedra') {
+      if (escolhaUsuario === 'pedra') {
         resultado = 'Empate';
       }
-      if(escolhaUsuario == 'tesoura')
-      {
+      if (escolhaUsuario === 'tesoura') {
         resultado = 'Perdeu';
       }
-      if(escolhaUsuario == 'papel')
-      {
+      if (escolhaUsuario === 'papel') {
         resultado = 'Ganhou';
       }
     }
 
-    if(escolhaComputador == 'papel'){
-      if(escolhaUsuario == 'papel')
-      {
+    if (escolhaComputador === 'papel') {
+      if (escolhaUsuario === 'papel') {
         resultado = 'Empate';
       }
-      if(escolhaUsuario == 'pedra')
-      {
+      if (escolhaUsuario === 'pedra') {
         resultado = 'Perdeu';
       }
-      if(escolhaUsuario == 'tesoura')
-      {
+      if (escolhaUsuario === 'tesoura') {
         resultado = 'Ganhou';
       }
     }
 
-    if(escolhaComputador == 'tesoura'){
-      if(escolhaUsuario == 'tesoura')
-      {
+    if (escolhaComputador === 'tesoura') {
+      if (escolhaUsuario === 'tesoura') {
         resultado = 'Empate';
       }
-      if(escolhaUsuario == 'papel')
-      {
+      if (escolhaUsuario === 'papel') {
         resultado = 'Perdeu';
       }
-      if(escolhaUsuario == 'pedra')
-      {
+      if (escolhaUsuario === 'pedra') {
         resultado = 'Ganhou';
       }
     }
 
     this.setState({ 
-      escolhaUsuario : escolhaUsuario,
-      escolhaComputador : escolhaComputador,
-      resultado: resultado
+      escolhaUsuario, escolhaComputador, resultado
     });
   }
 
-  render(){
+  render() {
     return (
       <View>
-        <Topo></Topo>
+        <Topo />
 
         <View style={styles.painelAcoes}>
           <View style={styles.btnEscolha}>
@@ -98,58 +91,13 @@ class app3 extends Component{
         <View style={styles.palco}>
           <Text style={styles.txtResultado}>{this.state.resultado}</Text>
 
-          <Icone escolha={this.state.escolhaComputador} jogador='Computador'></Icone>
-          <Icone escolha={this.state.escolhaUsuario} jogador='Você'></Icone>
+          <Icone escolha={this.state.escolhaComputador} jogador='Computador' />
+          <Icone escolha={this.state.escolhaUsuario} jogador='Você' />
 
         </View>
 
       </View>
     );
-  }
-}
-
-class Topo extends Component{
-  render(){
-    return (
-      <View>
-        <Image source={require('./imagem/jokenpo.png')} />
-      </View>
-    );
-  }
-}
-
-class Icone extends Component{
-  render(){
-
-    //this.props.escolha
-    //this.props.jogador
-    if(this.props.escolha == 'pedra'){
-      return (
-        <View style={styles.icone}>
-          <Text style={styles.txtJogador}>{this.props.jogador}</Text>
-          <Image source={require('./imagem/pedra.png')} />
-        </View>
-      );
-    }
-    else if(this.props.escolha == 'papel'){
-      return (
-        <View style={styles.icone}>
-          <Text style={styles.txtJogador}>{this.props.jogador}</Text>
-          <Image source={require('./imagem/papel.png')} />
-        </View>
-      );
-    }
-    else if(this.props.escolha == 'tesoura'){
-      return (
-        <View style={styles.icone}>
-          <Text style={styles.txtJogador}>{this.props.jogador}</Text>
-          <Image source={require('./imagem/tesoura.png')} />
-        </View>
-      );
-    }
-    else{
-      return false;
-    }
   }
 }
 
@@ -171,13 +119,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'red',
     height: 60
-  },
-  icone:{
-    alignItems: 'center',
-    marginBottom: 20
-  },
-  txtJogador: {
-    fontSize: 18
   }
 });
 
