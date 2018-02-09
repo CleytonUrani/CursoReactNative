@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry
+  AppRegistry, StatusBar
 } from 'react-native';
 
 import BarraNavegacao from './src/components/BarraNavegacao';
@@ -8,7 +8,13 @@ import BarraNavegacao from './src/components/BarraNavegacao';
 class app5 extends Component {
   render() {
     return (
-      <BarraNavegacao />
+      <View>
+        <StatusBar
+          //hidden={true}
+          backgroundColor = '#CCC'
+        />
+        <BarraNavegacao />
+      </View>
     );
   }
 }

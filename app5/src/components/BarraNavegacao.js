@@ -8,7 +8,7 @@ export default class app5 extends Component {
   render() {
     return (
         <View style={styles.barraTitulo}>
-            <Text>ATM Consultoria</Text>
+            <Text style={styles.titulo}>ATM Consultoria</Text>
         </View>
     );
   }
@@ -19,5 +19,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#CCC',
         padding: 10,
         height: 60
+    },
+    titulo: {
+        flex: 1,
+        fontSize: 18,
+        textAlign: 'center',
+        coklor: '#000'
     }
 });
