@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry, StatusBar
+  AppRegistry
 } from 'react-native';
 
-import BarraNavegacao from './src/components/BarraNavegacao';
+import CenaPrincipal from './src/components/CenaPrincipal';
 
 class app5 extends Component {
   render() {
     return (
-      <View>
-        <StatusBar
-          //hidden={true}
-          backgroundColor = '#CCC'
-        />
-        <BarraNavegacao />
-      </View>
+      <CenaPrincipal/>
     );
   }
 }

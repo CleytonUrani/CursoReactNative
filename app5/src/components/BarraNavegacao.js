@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 
 
-export default class app5 extends Component {
+export default class BarraNavegacao extends Component {
   render() {
     return (
         <View style={styles.barraTitulo}>
@@ -24,6 +24,6 @@ const styles = StyleSheet.create({
         flex: 1,
         fontSize: 18,
         textAlign: 'center',
-        coklor: '#000'
+        color: '#000'
     }
 });
