@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  View, StatusBar, Image, StyleSheet
+  View, StatusBar, Image, StyleSheet, TouchableHighlight
 } from 'react-native';
 
 import BarraNavegacao from './BarraNavegacao';
@@ -27,7 +27,13 @@ export default class CenaPrincipal extends Component {
 
             <View style={styles.menu}>
                 <View style={styles.menuGrupo}>
-                    <Image style={styles.ImgMenu} source={menuCliente}/>
+                    <TouchableHighlight
+                        onPress={() => {
+                            this.props.navigator.push({ id: 'b' });
+                        }}
+                    >
+                        <Image style={styles.ImgMenu} source={menuCliente}/>
+                    </TouchableHighlight>
                     <Image style={styles.ImgMenu} source={menuContato}/>
                 </View>
 
@@ -36,7 +42,7 @@ export default class CenaPrincipal extends Component {
                     <Image style={styles.ImgMenu} source={menuServico}/>
                 </View>
             </View>
-      </View>
+        </View>
     );
   }
 }

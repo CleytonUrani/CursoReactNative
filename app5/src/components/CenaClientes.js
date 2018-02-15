@@ -5,7 +5,7 @@ import {
 
 import BarraNavegacao from './BarraNavegacao';
 
-const detalheCliente = require('../imgs/detalhes_cliente.png')
+const detalheCliente = require('../imgs/detalhe_cliente.png')
 const cliente1 = require('../imgs/cliente1.png')
 const cliente2 = require('../imgs/cliente2.png')
 
