@@ -5,9 +5,9 @@ import {
 
 import BarraNavegacao from './BarraNavegacao';
 
-const detalheContatos = require('../imgs/detalhe_contato.png')
+const detalheEmpresa = require('../imgs/detalhe_empresa.png')
 
-export default class CenaContatos extends Component {
+export default class CenaEmpresa extends Component {
   render() {
     return (
         <View>
@@ -18,14 +18,12 @@ export default class CenaContatos extends Component {
             <BarraNavegacao voltar navigator={this.props.navigator} />
 
             <View style={styles.cabecalho}>
-                <Image source={detalheContatos} />
-                <Text style={styles.txtTitulo}>Contatos</Text>
+                <Image source={detalheEmpresa} />
+                <Text style={styles.txtTitulo}>A Empresa</Text>
             </View>
 
-            <View style={styles.detalheContatos}>
-                <Text style={styles.txtContatos}>TEL: (11) 1254-8788</Text>
-                <Text style={styles.txtContatos}>CEL: (00) 0000-0000</Text>
-                <Text style={styles.txtContatos}>E-MAIL: contato@atm.com.br</Text>
+            <View style={styles.detalheEmpresa}>
+                <Text style={styles.txtEmpresa}>A ATM Consultoria está no mercado....</Text>
             </View>
         </View>
     );
@@ -39,15 +37,15 @@ const styles = StyleSheet.create({
     },
     txtTitulo: {
         fontSize: 30,
-        color: '#61BD8C',
+        color: '#EC7148',
         marginLeft: 10,
         marginTop: 25
     },
-    detalheContatos: {
+    detalheEmpresa: {
         marginTop: 20,
         padding: 20
     },
-    txtContatos: {
+    txtEmpresa: {
         fontSize: 18
     }
 })

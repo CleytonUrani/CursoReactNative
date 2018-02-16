@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Text, StyleSheet, View
+  Text, StyleSheet, View, TouchableHighlight, Image
 } from 'react-native';
 
 const btnVoltar = require('../imgs/btn_voltar.png');
@@ -32,7 +32,7 @@ export default class BarraNavegacao extends Component {
 
 const styles = StyleSheet.create({
     barraTitulo: {
-        fleDirection: 'row',
+        flexDirection: 'row',
         backgroundColor: '#CCC',
         padding: 10,
         height: 60
