@@ -10,12 +10,12 @@ const detalheEmpresa = require('../imgs/detalhe_empresa.png')
 export default class CenaEmpresa extends Component {
   render() {
     return (
-        <View>
+        <View style={{ flex: 1, backgroundColor: '#FFF' }}>
             <StatusBar
                 //hidden={true}
-                backgroundColor = '#CCC'
+                backgroundColor = '#EC7148'
             />
-            <BarraNavegacao voltar navigator={this.props.navigator} />
+            <BarraNavegacao voltar navigator={this.props.navigator} corDeFundo='#EC7148'/>
 
             <View style={styles.cabecalho}>
                 <Image source={detalheEmpresa} />
