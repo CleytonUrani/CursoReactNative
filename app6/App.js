@@ -1,54 +1,18 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View,
-  Image
-} from 'react-native';
+import { Router, Scene } from 'react-native-router-flux';
 
-const logo = require('./src/imgs/logo.png');
-const btnjogar = require('./src/imgs/botao_jogar.png');
-const btnSobreJogo = require('./src/imgs/sobre_jogo.png');
-const btnOutrosJogos = require('./src/imgs/outros_jogos.png');
+import Principal from './src/components/Principal';
+import SobreJogo from './src/components/SobreJogo';
+import OutrosJogos from './src/components/OutrosJogos';
 
 export default class app6 extends Component {
   render() {
     return (
-      <View style={styles.cenaPrincipal}>
-        <View style={styles.apresentacaoJogo}>
-          <Image source={logo} />
-          <Image source={btnJogar} />
-        </View>
-
-        <View style={styles.rodape}>
-          <Image source={btnSobreJogo} />
-          <Image source={btnOutrosJogos} />
-        </View>
-      </View>
+      <Router>
+        <Scene key='principal' Component={Principal} initil title='Cara ou Coroa' />
+        <Scene key='sobreJogo' Component={SobreJogo} />
+        <Scene key='outrosJogos' Component={OutrosJogos} />
+      </Router>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  cenaPrincipal: {
-    flex: 1,
-    backgroundColor: '#61BD8C'
-  },
-  apresentacaoJogo:{
-    flex:10,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  rodape:{
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
-});
