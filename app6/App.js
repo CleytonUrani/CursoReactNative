@@ -9,9 +9,9 @@ export default class app6 extends Component {
   render() {
     return (
       <Router sceneStyle={{ paddingTop: 50 }}>
-        <Scene key='principal' Component={Principal} initil title='Cara ou Coroa' />
-        <Scene key='sobreJogo' Component={SobreJogo} title='Sobre o Jogo' />
-        <Scene key='outrosJogos' Component={OutrosJogos} title='Outros Jogos' />
+        <Scene key='principal' component={Principal} initil title='Cara ou Coroa' />
+        <Scene key='sobreJogo' component={SobreJogo} title='Sobre o Jogo' />
+        <Scene key='outrosJogos' component={OutrosJogos} title='Outros Jogos' />
       </Router>
     );
   }
